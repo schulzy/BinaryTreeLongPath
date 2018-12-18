@@ -6,11 +6,11 @@ namespace BinaryTreeLongPath.Modul
 {
     internal class TrianglePath
     {
-
         public string GetPath()
         {
             string codeBase = Assembly.GetExecutingAssembly().CodeBase;
-            return Path.Combine(Constants.Constant.TREE_PATH, codeBase);
+            Uri path = new Uri(codeBase);
+            return Path.Combine(Path.GetDirectoryName(path.AbsolutePath), Constants.Constant.TREE_PATH);
         }
     }
 }

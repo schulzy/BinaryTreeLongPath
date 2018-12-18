@@ -12,7 +12,8 @@ namespace BinaryTreeLongPath
     {
         public PathFinderManager(IUnityContainer container)
         {
-            
+            var binaryTreeCreator = container.Resolve<IBinaryTreeCreator>();
+            binaryTreeCreator.CreateTree();
         }
 
         public int GetPathSum()

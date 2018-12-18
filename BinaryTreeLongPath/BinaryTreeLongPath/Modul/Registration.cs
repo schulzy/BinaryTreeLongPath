@@ -9,8 +9,8 @@ namespace BinaryTreeLongPath.Modul
     {
         public void RegisterPrepare(IUnityContainer container)
         {
-            
             container.RegisterType<ITreeReader, FileTreeReader>(new InjectionConstructor(new TrianglePath().GetPath()));
+            container.RegisterType<IBinaryTreeCreator, BinaryTreeCreator>();
         }
     }
 }

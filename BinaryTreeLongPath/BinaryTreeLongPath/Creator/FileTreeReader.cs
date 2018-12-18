@@ -1,12 +1,11 @@
 ﻿using System.Collections.Generic;
-using System.Runtime.InteropServices;
 using BinaryTreeLongPath.Interface;
 
 namespace BinaryTreeLongPath.Creator
 {
     class FileTreeReader : ITreeReader
     {
-        private string _path;
+        private readonly string _path;
 
         public FileTreeReader(string path)
         {
@@ -18,6 +17,10 @@ namespace BinaryTreeLongPath.Creator
         public void Read()
         {
             string[] lines = System.IO.File.ReadAllLines(_path);
+            foreach (string line in lines)
+            {
+                Lines.AddLast(line);
+            }
         }
     }
 }
