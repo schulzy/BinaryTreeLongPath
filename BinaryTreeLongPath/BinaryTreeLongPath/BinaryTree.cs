@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using BinaryTreeLongPath.Interface;
 
 namespace BinaryTreeLongPath
 {
-    public class BinaryTree
+    public class BinaryTree : IBinaryTree
     {
         public LinkedList<LinkedList<int>> Tree { get; } = new LinkedList<LinkedList<int>>();
 
@@ -16,4 +17,6 @@ namespace BinaryTreeLongPath
             Tree.AddFirst(line);
         }
     }
+
+    
 }

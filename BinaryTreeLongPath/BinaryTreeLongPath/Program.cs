@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using BinaryTreeLongPath.Modul;
 using Unity;
 
@@ -17,6 +13,8 @@ namespace BinaryTreeLongPath
             register.RegisterPrepare(container);
 
             var pathFinder = new PathFinderManager(container);
+            Console.WriteLine(pathFinder.GetPathSum());
+            Console.ReadLine();
         }
     }
 }

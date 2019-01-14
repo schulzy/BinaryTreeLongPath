@@ -78,6 +78,8 @@
     <Compile Include="BinaryTree.cs" />
     <Compile Include="Constants\Constant.cs" />
     <Compile Include="Creator\BinaryTreeCreator.cs" />
+    <Compile Include="Creator\CalculatedBinaryTreeCreator.cs" />
+    <Compile Include="Interface\IBinaryTree.cs" />
     <Compile Include="Interface\IBinaryTreeCreator.cs" />
     <Compile Include="Interface\ITreeReader.cs" />
     <Compile Include="Interface\IPathFinderManager.cs" />
